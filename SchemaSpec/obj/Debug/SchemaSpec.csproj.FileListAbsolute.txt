@@ -1,0 +1,5 @@
+D:\hosocongty\StorePhone\SchemaSpec\bin\Debug\SchemaSpec.dll
+D:\hosocongty\StorePhone\SchemaSpec\bin\Debug\SchemaSpec.pdb
+D:\hosocongty\StorePhone\SchemaSpec\obj\Debug\SchemaSpec.dll
+D:\hosocongty\StorePhone\SchemaSpec\obj\Debug\SchemaSpec.pdb
+D:\hosocongty\StorePhone\SchemaSpec\obj\Debug\SchemaSpec.csprojResolveAssemblyReference.cache

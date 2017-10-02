@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StorePhone", "StorePhone\StorePhone.csproj", "{44FB5435-0F99-4CB5-B69B-82E0BF1934EC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SchemaSpec", "SchemaSpec\SchemaSpec.csproj", "{24B00DE8-E323-4F11-A65A-D9E87DACBB81}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{44FB5435-0F99-4CB5-B69B-82E0BF1934EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44FB5435-0F99-4CB5-B69B-82E0BF1934EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44FB5435-0F99-4CB5-B69B-82E0BF1934EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44FB5435-0F99-4CB5-B69B-82E0BF1934EC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{24B00DE8-E323-4F11-A65A-D9E87DACBB81}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{24B00DE8-E323-4F11-A65A-D9E87DACBB81}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{24B00DE8-E323-4F11-A65A-D9E87DACBB81}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{24B00DE8-E323-4F11-A65A-D9E87DACBB81}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
