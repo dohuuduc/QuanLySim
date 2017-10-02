@@ -56,3 +56,6 @@ D:\hosocongty\StorePhone\StorePhone\bin\Debug\StorePhone.exe
 D:\hosocongty\StorePhone\StorePhone\bin\Debug\StorePhone.pdb
 D:\hosocongty\StorePhone\StorePhone\bin\Debug\SchemaSpec.dll
 D:\hosocongty\StorePhone\StorePhone\obj\Debug\StorePhone.csprojResolveAssemblyReference.cache
+D:\GitHub Desktop\QuanLySim\StorePhone\bin\Debug\StorePhone.exe.config
+D:\GitHub Desktop\QuanLySim\StorePhone\obj\Debug\StorePhone.exe
+D:\GitHub Desktop\QuanLySim\StorePhone\obj\Debug\StorePhone.pdb
