@@ -276,12 +276,12 @@ namespace StorePhone
                     {
                         /*kiễm tra định nghĩ cấu hình file txt*/
                         string path = Path.GetDirectoryName(txt_FileName.Text);
-                        (new Utilities_Import()).CreateSchemaIni(txt_FileName.Text);
+                     
                         SchemaSpec.SchemeDef sdef = new SchemaSpec.SchemeDef();
                         if (Properties.Settings.Default.SchemaSpec == null)
                         {
-                            if (sdef == null)
-                            {
+                            //if (sdef == null)
+                            //{
                                 sdef.DelimiterType = SchemaSpec.SchemeDef.DelimType.TabDelimited;
                                 sdef.UsesHeader = SchemeDef.FirstRowHeader.No;
                                 List<ItemSpecification> ColumnDefinition = new List<ItemSpecification>();
@@ -292,40 +292,40 @@ namespace StorePhone
                                 sdef.ColumnDefinition = ColumnDefinition;
                                 Properties.Settings.Default.SchemaSpec = sdef;
                                 Properties.Settings.Default.Save();
-                            }
+                            //}
                         }
                         else
                         {
                             sdef = Properties.Settings.Default.SchemaSpec;
                         }
-
+                        (new Utilities_Import()).CreateSchemaIni(txt_FileName.Text);
                         // create a variable to hold the connection string
                         string connbit = string.Empty;
                         switch (sdef.DelimiterType)
                         {
                             case SchemaSpec.SchemeDef.DelimType.CsvDelimited:
                                 if (sdef.UsesHeader == SchemaSpec.SchemeDef.FirstRowHeader.Yes)
-                                    connbit = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + path + @";Extended Properties=""Text;HDR=Yes;FMT=CsvDelimited""";
+                                    connbit = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + path + @";Extended Properties=""Text;HDR=Yes;FMT=CsvDelimited;CharacterSet=Unicode""";
                                 else
-                                    connbit = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + path + @";Extended Properties=""Text;HDR=No;FMT=CsvDelimited""";
+                                    connbit = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + path + @";Extended Properties=""Text;HDR=No;FMT=CsvDelimited;CharacterSet=Unicode""";
                                 break;
                             case SchemaSpec.SchemeDef.DelimType.CustomDelimited:
                                 if (sdef.UsesHeader == SchemaSpec.SchemeDef.FirstRowHeader.Yes)
-                                    connbit = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + path + @";Extended Properties=""Text;HDR=Yes;FMT=Delimited(" + sdef.CustomDelimiter + ")" + "\"";
+                                    connbit = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + path + @";Extended Properties=""Text;HDR=Yes;CharacterSet=Unicode;FMT=Delimited(" + sdef.CustomDelimiter + ")" + "\"";
                                 else
-                                    connbit = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + path + @";Extended Properties=""Text;HDR=No;FMT=Delimited(" + sdef.CustomDelimiter + ")" + "\"";
+                                    connbit = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + path + @";Extended Properties=""Text;HDR=No;CharacterSet=Unicode;FMT=Delimited(" + sdef.CustomDelimiter + ")" + "\"";
                                 break;
                             case SchemaSpec.SchemeDef.DelimType.FixedWidth:
                                 if (sdef.UsesHeader == SchemaSpec.SchemeDef.FirstRowHeader.Yes)
-                                    connbit = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + path + @";Extended Properties=""Text;HDR=Yes;FMT=FixedLength""";
+                                    connbit = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + path + @";Extended Properties=""Text;HDR=Yes;CharacterSet=Unicode;FMT=FixedLength""";
                                 else
-                                    connbit = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + path + @";Extended Properties=""Text;HDR=No;FMT=FixedLength""";
+                                    connbit = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + path + @";Extended Properties=""Text;HDR=No;CharacterSet=Unicode;FMT=FixedLength""";
                                 break;
                             case SchemaSpec.SchemeDef.DelimType.TabDelimited:
                                 if (sdef.UsesHeader == SchemaSpec.SchemeDef.FirstRowHeader.Yes)
-                                    connbit = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + path + @";Extended Properties=""Text;HDR=Yes;FMT=TabDelimited""";
+                                    connbit = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + path + @";Extended Properties=""Text;HDR=Yes;CharacterSet=Unicode;FMT=TabDelimited""";
                                 else
-                                    connbit = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + path + @";Extended Properties=""Text;HDR=No;FMT=TabDelimited""";
+                                    connbit = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + path + @";Extended Properties=""Text;HDR=No;CharacterSet=Unicode;FMT=TabDelimited""";
                                 break;
                             default:
                                 break;
@@ -381,7 +381,7 @@ namespace StorePhone
                             line = sReader.ReadLine();
                             char kytu = '\t';
                             lineParts = line.Split(new char[] { kytu });
-                            for (int i = 1; i < lineParts.Count(); i++)
+                            for (int i = 1; i <= lineParts.Count(); i++)
                             {
                                 cbb_TelNumber.Items.AddRange(new object[] { i.ToString() });
                                 cbb_ten_khach_hang.Items.AddRange(new object[] { i.ToString() });
@@ -570,6 +570,8 @@ namespace StorePhone
                     cbb_TelNumber.Focus();
                     return;
                 }
+                groupBox_grid.Enabled = false;
+                panel1.Enabled = false;
                 import();
             }
             catch (Exception ex)
@@ -626,11 +628,11 @@ namespace StorePhone
                 Utiliti.ConnectionString = connectionString;
                 Utiliti.ColumnNamesList = DanhSachCotnew();
                 Utiliti.Dict = DanhSachCot();
-                Utiliti.TongrowsText = 100;
+                Utiliti.TongrowsText = _nTongRowsText;
                 Utiliti.ProcessImport(arrControl);
 
 
-
+                
                 /*===================================================================*/
                 string strthongbao = Utilities_Import.hasProcess ? "Hoàn thành load số liệu." : "Tạm dừng do người dùng!!!";
                 lblmessage.Text = strthongbao;
@@ -639,9 +641,9 @@ namespace StorePhone
                 BindingTelNumberToGridView();
                 BindingTelNumberToGridViewTonTai();
 
-                btn_View.Enabled = true;
-                button1.Enabled = true;
-                button2.Enabled = true;
+                
+                groupBox_grid.Enabled = true;
+                panel1.Enabled = true;
 
 
             }
@@ -890,7 +892,7 @@ namespace StorePhone
                 /*tao table*/
 
 
-                for (int i = 0; i < SoCot; i++)
+                for (int i = 1; i <= SoCot; i++)
                 {
                     table.Columns.Add(string.Format("[{0}]", i.ToString()), typeof(string));
                 }
@@ -902,7 +904,7 @@ namespace StorePhone
                 {
                     lineParts = line.Split(new char[] { kytu });
                     DataRow rows = table.NewRow();
-                    for (int i = 0; i < SoCot; i++)
+                    for (int i = 1; i <= SoCot; i++)
                     {
 
                         rows[string.Format("[{0}]", i)] = lineParts[i];

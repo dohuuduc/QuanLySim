@@ -60,7 +60,7 @@
       <HintPath>..\..\AppSearch\AppSearch\bin\Debug\NeroBar.dll</HintPath>
     </Reference>
     <Reference Include="SchemaSpec">
-      <HintPath>..\..\..\App\PM_TachPhone_Email\trunk\TachPhone_Email\TachPhone_Email\bin\Debug\SchemaSpec.dll</HintPath>
+      <HintPath>..\..\Runcall\SIPSample\bin\Debug\SchemaSpec.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />

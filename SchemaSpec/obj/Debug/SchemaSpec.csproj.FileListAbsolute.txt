@@ -3,3 +3,9 @@ D:\hosocongty\StorePhone\SchemaSpec\bin\Debug\SchemaSpec.pdb
 D:\hosocongty\StorePhone\SchemaSpec\obj\Debug\SchemaSpec.dll
 D:\hosocongty\StorePhone\SchemaSpec\obj\Debug\SchemaSpec.pdb
 D:\hosocongty\StorePhone\SchemaSpec\obj\Debug\SchemaSpec.csprojResolveAssemblyReference.cache
+D:\GitHub Desktop\QuanLySim\SchemaSpec\bin\Debug\SchemaSpec.dll
+D:\GitHub Desktop\QuanLySim\SchemaSpec\bin\Debug\SchemaSpec.pdb
+D:\GitHub Desktop\QuanLySim\SchemaSpec\obj\Debug\SchemaSpec.dll
+D:\GitHub Desktop\QuanLySim\SchemaSpec\obj\Debug\SchemaSpec.pdb
+D:\GitHub Desktop\QuanLySim\StorePhone\bin\Debug\SchemaSpec.dll
+D:\GitHub Desktop\QuanLySim\StorePhone\bin\Debug\SchemaSpec.pdb

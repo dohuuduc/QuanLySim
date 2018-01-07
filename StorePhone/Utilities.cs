@@ -733,6 +733,7 @@ namespace StorePhone
                 }
 
                 /***********text*****************/
+                /*
                 OleDbConnection con = new OleDbConnection(connectionString);
                 con.Open();
 
@@ -742,7 +743,7 @@ namespace StorePhone
                 dt.TableName = "Data";
                 dap.Fill(dt);
                 
-
+    */
                 reader = SQLDatabase.ExcOleReaderDataSource(connectionString, tableName, columnNames);
 
                 progressBar11.MaxValue = int.Parse(totalRow.ToString());
