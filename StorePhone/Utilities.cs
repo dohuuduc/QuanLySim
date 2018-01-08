@@ -733,17 +733,17 @@ namespace StorePhone
                 }
 
                 /***********text*****************/
-                /*
+                
                 OleDbConnection con = new OleDbConnection(connectionString);
                 con.Open();
 
-                OleDbDataAdapter dap = new OleDbDataAdapter("select * from [mau.txt]", con);
+                OleDbDataAdapter dap = new OleDbDataAdapter("select [3] from [1.txt]", con);
 
                 DataTable dt = new DataTable();
                 dt.TableName = "Data";
                 dap.Fill(dt);
                 
-    */
+    
                 reader = SQLDatabase.ExcOleReaderDataSource(connectionString, tableName, columnNames);
 
                 progressBar11.MaxValue = int.Parse(totalRow.ToString());
@@ -778,113 +778,114 @@ namespace StorePhone
 
                     if (dict.FirstOrDefault(x => x.Key == "cbb_dia_chi").Value != "")
                     {
-                        SqlBulkCopyColumnMapping cbb_dia_chi = new SqlBulkCopyColumnMapping(Convert.ToInt32(dict.FirstOrDefault(x => x.Key == "cbb_dia_chi").Value), "dia_chi");
+                        SqlBulkCopyColumnMapping cbb_dia_chi = new SqlBulkCopyColumnMapping(dict.FirstOrDefault(x => x.Key == "cbb_dia_chi").Value, "dia_chi");
                         bulkCopy.ColumnMappings.Add(cbb_dia_chi);
                     }
                     
                     if (dict.FirstOrDefault(x => x.Key == "cbb_Ngay").Value != "")
                     {
-                        SqlBulkCopyColumnMapping cbb_Ngay = new SqlBulkCopyColumnMapping(Convert.ToInt32(dict.FirstOrDefault(x => x.Key == "cbb_Ngay").Value), "ngay");
+                        SqlBulkCopyColumnMapping cbb_Ngay = new SqlBulkCopyColumnMapping(dict.FirstOrDefault(x => x.Key == "cbb_Ngay").Value, "ngay");
                         bulkCopy.ColumnMappings.Add(cbb_Ngay);
                     }
                     if (dict.FirstOrDefault(x => x.Key == "cbb_Thang").Value != "")
                     {
-                        SqlBulkCopyColumnMapping cbb_Thang = new SqlBulkCopyColumnMapping(Convert.ToInt32(dict.FirstOrDefault(x => x.Key == "cbb_Thang").Value), "thang");
+                        SqlBulkCopyColumnMapping cbb_Thang = new SqlBulkCopyColumnMapping(dict.FirstOrDefault(x => x.Key == "cbb_Thang").Value, "thang");
                         bulkCopy.ColumnMappings.Add(cbb_Thang);
                     }
                     if (dict.FirstOrDefault(x => x.Key == "cbb_namsinh").Value != "")
                     {
-                        SqlBulkCopyColumnMapping cbb_namsinh = new SqlBulkCopyColumnMapping(Convert.ToInt32(dict.FirstOrDefault(x => x.Key == "cbb_namsinh").Value), "namsinh");
+                        SqlBulkCopyColumnMapping cbb_namsinh = new SqlBulkCopyColumnMapping(dict.FirstOrDefault(x => x.Key == "cbb_namsinh").Value, "namsinh");
                         bulkCopy.ColumnMappings.Add(cbb_namsinh);
                     }
                     if (dict.FirstOrDefault(x => x.Key == "cbb_nganhang").Value != "")
                     {
-                        SqlBulkCopyColumnMapping cbb_nganhang = new SqlBulkCopyColumnMapping(Convert.ToInt32(dict.FirstOrDefault(x => x.Key == "cbb_nganhang").Value), "ngan_hang");
+                        SqlBulkCopyColumnMapping cbb_nganhang = new SqlBulkCopyColumnMapping(dict.FirstOrDefault(x => x.Key == "cbb_nganhang").Value, "ngan_hang");
                         bulkCopy.ColumnMappings.Add(cbb_nganhang);
                     }
                    
                     if (dict.FirstOrDefault(x => x.Key == "cbb_cuoc").Value != "")
                     {
-                        SqlBulkCopyColumnMapping cbb_cuoc = new SqlBulkCopyColumnMapping(Convert.ToInt32(dict.FirstOrDefault(x => x.Key == "cbb_cuoc").Value), "cuoc");
+                        SqlBulkCopyColumnMapping cbb_cuoc = new SqlBulkCopyColumnMapping(dict.FirstOrDefault(x => x.Key == "cbb_cuoc").Value, "cuoc");
                         bulkCopy.ColumnMappings.Add(cbb_cuoc);
                     }
 
                     if (dict.FirstOrDefault(x => x.Key == "cbb_sim").Value != "")
                     {
-                        SqlBulkCopyColumnMapping cbb_sim = new SqlBulkCopyColumnMapping(Convert.ToInt32(dict.FirstOrDefault(x => x.Key == "cbb_sim").Value), "sim");
+                        SqlBulkCopyColumnMapping cbb_sim = new SqlBulkCopyColumnMapping(dict.FirstOrDefault(x => x.Key == "cbb_sim").Value, "sim");
                         bulkCopy.ColumnMappings.Add(cbb_sim);
                     }
 
                     if (dict.FirstOrDefault(x => x.Key == "cbb_tinh").Value != "")
                     {
-                        SqlBulkCopyColumnMapping cbb_tinh = new SqlBulkCopyColumnMapping(Convert.ToInt32(dict.FirstOrDefault(x => x.Key == "cbb_tinh").Value), "tinh");
+                        SqlBulkCopyColumnMapping cbb_tinh = new SqlBulkCopyColumnMapping(dict.FirstOrDefault(x => x.Key == "cbb_tinh").Value, "tinh");
                         bulkCopy.ColumnMappings.Add(cbb_tinh);
                     }
 
                     if (dict.FirstOrDefault(x => x.Key == "cbb_ghichu").Value != "")
                     {
-                        SqlBulkCopyColumnMapping cbb_ghichu = new SqlBulkCopyColumnMapping(Convert.ToInt32(dict.FirstOrDefault(x => x.Key == "cbb_ghichu").Value), "ghi_chu");
+                        SqlBulkCopyColumnMapping cbb_ghichu = new SqlBulkCopyColumnMapping(dict.FirstOrDefault(x => x.Key == "cbb_ghichu").Value, "ghi_chu");
                         bulkCopy.ColumnMappings.Add(cbb_ghichu);
                     }
 
                     if (dict.FirstOrDefault(x => x.Key == "cbb_gioitinh").Value != "")
                     {
-                        SqlBulkCopyColumnMapping cbb_gioitinh = new SqlBulkCopyColumnMapping(Convert.ToInt32(dict.FirstOrDefault(x => x.Key == "cbb_gioitinh").Value), "gioi_tinh");
+                        SqlBulkCopyColumnMapping cbb_gioitinh = new SqlBulkCopyColumnMapping(dict.FirstOrDefault(x => x.Key == "cbb_gioitinh").Value, "gioi_tinh");
                         bulkCopy.ColumnMappings.Add(cbb_gioitinh);
                     }
                     
                     if (dict.FirstOrDefault(x => x.Key == "cbb_tinhcuoc").Value != "")
                     {
-                        SqlBulkCopyColumnMapping cbb_tinhcuoc = new SqlBulkCopyColumnMapping(Convert.ToInt32(dict.FirstOrDefault(x => x.Key == "cbb_tinhcuoc").Value), "tinh_cuoc");
+                        SqlBulkCopyColumnMapping cbb_tinhcuoc = new SqlBulkCopyColumnMapping(dict.FirstOrDefault(x => x.Key == "cbb_tinhcuoc").Value, "tinh_cuoc");
                         bulkCopy.ColumnMappings.Add(cbb_tinhcuoc);
                     }
                     if (dict.FirstOrDefault(x => x.Key == "cbb_phuong").Value != "")
                     {
-                        SqlBulkCopyColumnMapping cbb_Phuong = new SqlBulkCopyColumnMapping(Convert.ToInt32(dict.FirstOrDefault(x => x.Key == "cbb_Phuong").Value), "phuong");
+                        SqlBulkCopyColumnMapping cbb_Phuong = new SqlBulkCopyColumnMapping(dict.FirstOrDefault(x => x.Key == "cbb_phuong").Value, "phuong");
                         bulkCopy.ColumnMappings.Add(cbb_Phuong);
+
                     }
 
                     if (dict.FirstOrDefault(x => x.Key == "cbb_quanhuyen").Value != "")
                     {
-                        SqlBulkCopyColumnMapping cbb_quanhuyen = new SqlBulkCopyColumnMapping(Convert.ToInt32(dict.FirstOrDefault(x => x.Key == "cbb_quanhuyen").Value), "quan_huyen");
+                        SqlBulkCopyColumnMapping cbb_quanhuyen = new SqlBulkCopyColumnMapping(dict.FirstOrDefault(x => x.Key == "cbb_quanhuyen").Value, "quan_huyen");
                         bulkCopy.ColumnMappings.Add(cbb_quanhuyen);
                     }
 
                     if (dict.FirstOrDefault(x => x.Key == "cbb_email").Value != "")
                     {
-                        SqlBulkCopyColumnMapping cbb_email = new SqlBulkCopyColumnMapping(Convert.ToInt32(dict.FirstOrDefault(x => x.Key == "cbb_email").Value), "email");
+                        SqlBulkCopyColumnMapping cbb_email = new SqlBulkCopyColumnMapping(dict.FirstOrDefault(x => x.Key == "cbb_email").Value, "email");
                         bulkCopy.ColumnMappings.Add(cbb_email);
                     }
 
                     if (dict.FirstOrDefault(x => x.Key == "cbb_ngay_kich_hoat").Value != "")
                     {
-                        SqlBulkCopyColumnMapping cbb_ngay_kich_hoat = new SqlBulkCopyColumnMapping(Convert.ToInt32(dict.FirstOrDefault(x => x.Key == "cbb_ngay_kich_hoat").Value), "ngay_kich_hoat");
+                        SqlBulkCopyColumnMapping cbb_ngay_kich_hoat = new SqlBulkCopyColumnMapping(dict.FirstOrDefault(x => x.Key == "cbb_ngay_kich_hoat").Value, "ngay_kich_hoat");
                         bulkCopy.ColumnMappings.Add(cbb_ngay_kich_hoat);
                     }
                     if (dict.FirstOrDefault(x => x.Key == "cbb_goiCuoc").Value != "")
                     {
-                        SqlBulkCopyColumnMapping cbb_GoiCuoc = new SqlBulkCopyColumnMapping(Convert.ToInt32(dict.FirstOrDefault(x => x.Key == "cbb_GoiCuoc").Value), "goi_cuoc");
+                        SqlBulkCopyColumnMapping cbb_GoiCuoc = new SqlBulkCopyColumnMapping(dict.FirstOrDefault(x => x.Key == "cbb_goiCuoc").Value, "goi_cuoc");
                         bulkCopy.ColumnMappings.Add(cbb_GoiCuoc);
                     }
                     if (dict.FirstOrDefault(x => x.Key == "cbb_dongmay").Value != "")
                     {
-                        SqlBulkCopyColumnMapping cbb_dongmay = new SqlBulkCopyColumnMapping(Convert.ToInt32(dict.FirstOrDefault(x => x.Key == "cbb_dongmay").Value), "dong_may");
+                        SqlBulkCopyColumnMapping cbb_dongmay = new SqlBulkCopyColumnMapping(dict.FirstOrDefault(x => x.Key == "cbb_dongmay").Value, "dong_may");
                         bulkCopy.ColumnMappings.Add(cbb_dongmay);
                     }
 
                     if (dict.FirstOrDefault(x => x.Key == "cbb_hedieuhanh").Value != "")
                     {
-                        SqlBulkCopyColumnMapping cbb_HeDieuhanh = new SqlBulkCopyColumnMapping(Convert.ToInt32(dict.FirstOrDefault(x => x.Key == "cbb_HeDieuhanh").Value), "he_dieu_hanh");
+                        SqlBulkCopyColumnMapping cbb_HeDieuhanh = new SqlBulkCopyColumnMapping(dict.FirstOrDefault(x => x.Key == "cbb_hedieuhanh").Value, "he_dieu_hanh");
                         bulkCopy.ColumnMappings.Add(cbb_HeDieuhanh);
                     }
                     if (dict.FirstOrDefault(x => x.Key == "cbb_chucvu").Value != "")
                     {
-                        SqlBulkCopyColumnMapping cbb_chucvu = new SqlBulkCopyColumnMapping(Convert.ToInt32(dict.FirstOrDefault(x => x.Key == "cbb_chucvu").Value), "chuc_vu");
+                        SqlBulkCopyColumnMapping cbb_chucvu = new SqlBulkCopyColumnMapping(dict.FirstOrDefault(x => x.Key == "cbb_chucvu").Value, "chuc_vu");
                         bulkCopy.ColumnMappings.Add(cbb_chucvu);
                     }
                     if (dict.FirstOrDefault(x => x.Key == "cbb_congty").Value != "")
                     {
-                        SqlBulkCopyColumnMapping cbb_congty = new SqlBulkCopyColumnMapping(Convert.ToInt32(dict.FirstOrDefault(x => x.Key == "cbb_congty").Value), "cong_ty");
+                        SqlBulkCopyColumnMapping cbb_congty = new SqlBulkCopyColumnMapping(dict.FirstOrDefault(x => x.Key == "cbb_congty").Value, "cong_ty");
                         bulkCopy.ColumnMappings.Add(cbb_congty);
                     }
                     try
