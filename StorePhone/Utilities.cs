@@ -898,6 +898,11 @@ namespace StorePhone
                     }
                     finally
                     {
+                        progressBar11.Value = 100;
+                        progressBar11.Update();
+                        lblmessage.Text = string.Format("Hoàn thành import {0}", int.Parse(totalRow.ToString()));
+                        Thread.Sleep(0);
+
                         reader.Close();
                     }
                 }
