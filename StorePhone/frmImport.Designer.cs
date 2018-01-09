@@ -235,8 +235,11 @@
             this.progressBar.Name = "progressBar";
             this.progressBar.PercentageBasedOn = JCS.Components.NeroBar.NeroBarPercentageCalculationModes.WholeControl;
             this.progressBar.PercentageShow = true;
+            this.progressBar.Segment1Color = System.Drawing.Color.Magenta;
+            this.progressBar.Segment2Color = System.Drawing.Color.Magenta;
             this.progressBar.Segment2StartThreshold = 90D;
-            this.progressBar.Size = new System.Drawing.Size(902, 15);
+            this.progressBar.Segment3Color = System.Drawing.Color.Magenta;
+            this.progressBar.Size = new System.Drawing.Size(1067, 15);
             this.progressBar.TabIndex = 31;
             this.progressBar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -936,7 +939,7 @@
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(63, 23);
             this.button3.TabIndex = 6;
-            this.button3.Text = "Load dữ liệu";
+            this.button3.Text = "Load";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
