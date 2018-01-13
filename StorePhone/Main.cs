@@ -986,99 +986,99 @@ namespace StorePhone
                         break;
                     case 0:
                     case -1:
-                        strsql += string.Format(" where ten_khach_hang like N'%{0}%' or " +
-                                                " didong like '%{0}%' or " +
-                                                " dia_chi like N'%{0}%' or " +
-                                                " sim like N'%{0}%' or " +
-                                                " tinh like N'%{0}%' or " +
-                                                " tinh_cuoc like N'%{0}%' or " +
-                                                " gioi_tinh like N'%{0}%' or " +
-                                                " ghi_chu like N'%{0}%'  or " +
-                                                " ngan_hang like N'%{0}%' or " +
-                                                " namsinh like N'%{0}%' or " +
-                                                " ngay like N'%{0}%' or " +
-                                                " thang like N'%{0}%' or " +
-                                                " ghi_chu like N'%{0}%'  or " +
-                                                " phuong like N'%{0}%'  or " +
-                                                " quan_huyen like N'%{0}%'  or " +
-                                                " email like N'%{0}%'  or " +
-                                                " ngay_kich_hoat like N'%{0}%'  or " +
-                                                " goi_cuoc like N'%{0}%'  or " +
-                                                " dong_may like N'%{0}%'  or " +
-                                                " he_dieu_hanh like N'%{0}%'  or " +
-                                                " chuc_vu like N'%{0}%'  or " +
-                                                " cong_ty like N'%{0}%'  or " +
-                                                " filenguon like N'%{0}%'", search);
+                        strsql += string.Format(" where ten_khach_hang like N''%{0}%'' or " +
+                                                " didong like ''%{0}%'' or " +
+                                                " dia_chi like N''%{0}%'' or " +
+                                                " sim like N''%{0}%'' or " +
+                                                " tinh like N''%{0}%'' or " +
+                                                " tinh_cuoc like N''%{0}%'' or " +
+                                                " gioi_tinh like N''%{0}%'' or " +
+                                                " ghi_chu like N''%{0}%''  or " +
+                                                " ngan_hang like N''%{0}%'' or " +
+                                                " namsinh like N''%{0}%'' or " +
+                                                " ngay like N''%{0}%'' or " +
+                                                " thang like N''%{0}%'' or " +
+                                                " ghi_chu like N''%{0}%''  or " +
+                                                " phuong like N''%{0}%''  or " +
+                                                " quan_huyen like N''%{0}%''  or " +
+                                                " email like N''%{0}%''  or " +
+                                                " ngay_kich_hoat like N''%{0}%''  or " +
+                                                " goi_cuoc like N''%{0}%''  or " +
+                                                " dong_may like N''%{0}%''  or " +
+                                                " he_dieu_hanh like N''%{0}%''  or " +
+                                                " chuc_vu like N''%{0}%''  or " +
+                                                " cong_ty like N''%{0}%''  or " +
+                                                " filenguon like N''%{0}%''", search);
                         break;
                     case 1:/*di dong*/
-                        strsql += string.Format("where didong like '%{0}%'", search);
+                        strsql += string.Format("where didong like ''%{0}%''", search);
                         break;
                     case 2:/*"khách hàng",*/
-                        strsql += string.Format("where ten_khach_hang like N'%{0}%'", search);
+                        strsql += string.Format("where ten_khach_hang like N''%{0}%''", search);
                         break;
                     case 3:/*"phường",*/
-                        strsql += string.Format("where phuong like N'%{0}%'", search);
+                        strsql += string.Format("where phuong like N''%{0}%''", search);
                         break;
                     case 4:/*"quan_huyen",*/
-                        strsql += string.Format("where quan_huyen like N'%{0}%'", search);
+                        strsql += string.Format("where quan_huyen like N''%{0}%''", search);
                         break;
                     case 5:/*dia chi*/
-                        strsql += string.Format("where dia_chi like N'%{0}%'", search);
+                        strsql += string.Format("where dia_chi like N''%{0}%''", search);
                         break;
 
                     case 6:/*Ngày*/
-                        strsql += string.Format("where ngay like N'%{0}%'", search);
+                        strsql += string.Format("where ngay like N''%{0}%''", search);
                         break;
                     case 7:/*Tháng*/
-                        strsql += string.Format("where thang like N'%{0}%'", search);
+                        strsql += string.Format("where thang like N''%{0}%''", search);
                         break;
                     case 8:/*Năm sinh*/
-                        strsql += string.Format("where namsinh like N'%{0}%'", search);
+                        strsql += string.Format("where namsinh like N''%{0}%''", search);
                         break;
                     case 9:/*email*/
-                        strsql += string.Format("where email like N'%{0}%'", search);
+                        strsql += string.Format("where email like N''%{0}%''", search);
                         break;
                     case 10:/*cuoc*/
-                        strsql += string.Format("where cuoc like N'%{0}%'", search);
+                        strsql += string.Format("where cuoc like N''%{0}%''", search);
                         break;
                     case 11:/*gioitinh*/
-                        strsql += string.Format("where gioi_tinh like N'%{0}%'", search);
+                        strsql += string.Format("where gioi_tinh like N''%{0}%''", search);
                         break;
                     case 12:/*ngan_hang*/
-                        strsql += string.Format("where ngan_hang like N'%{0}%'", search);
+                        strsql += string.Format("where ngan_hang like N''%{0}%''", search);
                         break;
                     case 13:/*sim*/
-                        strsql += string.Format("where sim like N'%{0}%'", search);
+                        strsql += string.Format("where sim like N''%{0}%''", search);
                         break;
                     case 14:/*tinh*/
-                        strsql += string.Format("where tinh like N'%{0}%'", search);
+                        strsql += string.Format("where tinh like N''%{0}%''", search);
                         break;
                     case 15:/*tinh_cuoc*/
-                        strsql += string.Format("where tinh_cuoc like N'%{0}%'", search);
+                        strsql += string.Format("where tinh_cuoc like N''%{0}%''", search);
                         break;
                     case 16:/*ngay_kich_hoat*/
-                        strsql += string.Format("where ngay_kich_hoat like N'%{0}%'", search);
+                        strsql += string.Format("where ngay_kich_hoat like N''%{0}%''", search);
                         break;
                     case 17:/*goi_cuoc*/
-                        strsql += string.Format("where goi_cuoc like N'%{0}%'", search);
+                        strsql += string.Format("where goi_cuoc like N''%{0}%''", search);
                         break;
                     case 18:/*dong_may*/
-                        strsql += string.Format("where dong_may like N'%{0}%'", search);
+                        strsql += string.Format("where dong_may like N''%{0}%''", search);
                         break;
                     case 19:/*he_dieu_hanh*/
-                        strsql += string.Format("where he_dieu_hanh like N'%{0}%'", search);
+                        strsql += string.Format("where he_dieu_hanh like N''%{0}%''", search);
                         break;
                     case 20:/*chuc_vu*/
-                        strsql += string.Format("where chuc_vu like N'%{0}%'", search);
+                        strsql += string.Format("where chuc_vu like N''%{0}%''", search);
                         break;
                     case 21:/*cong_ty*/
-                        strsql += string.Format("where cong_ty like N'%{0}%'", search);
+                        strsql += string.Format("where cong_ty like N''%{0}%''", search);
                         break;
                     case 22:/*ghi_chu*/
-                        strsql += string.Format("where ghi_chu like N'%{0}%'", search);
+                        strsql += string.Format("where ghi_chu like N''%{0}%''", search);
                         break;
                     case 23:/*filenguon*/
-                        strsql += string.Format("where filenguon like N'%{0}%'", search);
+                        strsql += string.Format("where filenguon like N''%{0}%''", search);
                         break;
                     default:
                         break;
@@ -1100,9 +1100,11 @@ namespace StorePhone
                 */
 
                 command = string.Format("exec [spExport] '{0}','{1}'", strsql, frm.Filename);
+                if(SQLDatabase.ExcNonQuery(command))
+                    MessageBox.Show("Xuất file thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 objPleaseWait1.Close();
-                MessageBox.Show("Xuất file thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                
             }
         }
 

@@ -1081,9 +1081,12 @@ namespace StorePhone
                     Export.ExportText(table, frm1.Filename, "\t");
                     */
                     command = string.Format("exec [spExport] '{0}','{1}'", strsql, frm1.Filename);
+                    if (SQLDatabase.ExcNonQuery(command))
+                        MessageBox.Show("Xuất file thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
 
                     objPleaseWait1.Close();
-                    MessageBox.Show("Xuất file thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    
                 }
             }
             catch (Exception ex)
