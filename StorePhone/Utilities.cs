@@ -737,13 +737,13 @@ namespace StorePhone
                 OleDbConnection con = new OleDbConnection(connectionString);
                 con.Open();
 
-                OleDbDataAdapter dap = new OleDbDataAdapter("select [3] from [2.txt]", con);
+                OleDbDataAdapter dap = new OleDbDataAdapter("select * from [096test.txt]", con);
 
                 DataTable dt = new DataTable();
                 dt.TableName = "Data";
                 dap.Fill(dt);
                 */
-    
+
                 reader = SQLDatabase.ExcOleReaderDataSource(connectionString, tableName, columnNames);
 
                 progressBar11.MaxValue = int.Parse(totalRow.ToString());
