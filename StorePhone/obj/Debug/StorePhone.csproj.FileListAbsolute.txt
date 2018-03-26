@@ -61,7 +61,6 @@ D:\GitHub Desktop\QuanLySim\StorePhone\obj\Debug\StorePhone.exe
 D:\GitHub Desktop\QuanLySim\StorePhone\obj\Debug\StorePhone.pdb
 D:\GitHub Desktop\QuanLySim\StorePhone\bin\Debug\StorePhone.exe
 D:\GitHub Desktop\QuanLySim\StorePhone\bin\Debug\StorePhone.pdb
-D:\GitHub Desktop\QuanLySim\StorePhone\bin\Debug\SchemaSpec.dll
 D:\GitHub Desktop\QuanLySim\StorePhone\obj\Debug\StorePhone.frmBackup.resources
 D:\GitHub Desktop\QuanLySim\StorePhone\obj\Debug\StorePhone.frmChangKieuXuat.resources
 D:\GitHub Desktop\QuanLySim\StorePhone\obj\Debug\StorePhone.frmTimNangCao.resources
@@ -76,3 +75,5 @@ D:\GitHub Desktop\QuanLySim\StorePhone\obj\Debug\StorePhone.frmImport.resources
 D:\GitHub Desktop\QuanLySim\StorePhone\obj\Debug\StorePhone.PleaseWait.resources
 D:\GitHub Desktop\QuanLySim\StorePhone\obj\Debug\StorePhone.Properties.Resources.resources
 D:\GitHub Desktop\QuanLySim\StorePhone\obj\Debug\StorePhone.csproj.GenerateResource.Cache
+D:\GitHub Desktop\QuanLySim\StorePhone\obj\Debug\StorePhone.csproj.CoreCompileInputs.cache
+D:\GitHub Desktop\QuanLySim\StorePhone\obj\Debug\StorePhone.csproj.CopyComplete

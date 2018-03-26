@@ -72,16 +72,18 @@ namespace StorePhone
                 groupBox_grid.Text = "Khách Hàng";
 
 
-                dataGrid_ListTelNumberNew.DataSource = SQLDatabase.ExcDataTable(" select  a.Id,a.didong, a.ten_khach_hang,a.phuong,a.quan_huyen ,  a.dia_chi,a.ngay,a.thang, a.namsinh,a.email, a.cuoc, a.gioi_tinh, a.ngan_hang, a.sim, a.tinh,a.tinh_cuoc,a.ngay_kich_hoat,a.goi_cuoc,a.dong_may,a.he_dieu_hanh,a.chuc_vu,a.cong_ty, a.ghi_chu,  a.filenguon,  a.creatdate "
+                dataGrid_ListTelNumberNew.DataSource = SQLDatabase.ExcDataTable(" select top 100 a.Id,a.didong, a.ten_khach_hang,a.phuong,a.quan_huyen ,  a.dia_chi,a.ngay,a.thang, a.namsinh,a.email, a.cuoc, a.gioi_tinh, a.ngan_hang, a.sim, a.tinh,a.tinh_cuoc,a.ngay_kich_hoat,a.goi_cuoc,a.dong_may,a.he_dieu_hanh,a.chuc_vu,a.cong_ty, a.ghi_chu,  a.filenguon,  a.creatdate "
                                                                                     + " from dienthoai_new  a left join dienthoai_goc b on a.didong=b.didong where b.didong is null");
 
 
                 long totalRowCount = 0;
-                DataTable table1 = SQLDatabase.ExcDataTable("Select COUNT(*) As TotalRow from dienthoai_new  a left join dienthoai_goc b on a.didong=b.didong " +
-                                                            "where b.didong is null");
-                if (table1 != null && Convert.ToInt32(table1.Rows[0][0]) > 0)
+        //DataTable table1 = SQLDatabase.ExcDataTable("Select COUNT(*) As TotalRow from dienthoai_new  a left join dienthoai_goc b on a.didong=b.didong " +
+        //                                            "where b.didong is null");
+
+        totalRowCount = dataGrid_ListTelNumberNew.Rows.Count;
+                if (totalRowCount > 0)
                 {
-                    totalRowCount = long.Parse(table1.Rows[0][0].ToString());
+                    totalRowCount = long.Parse(totalRowCount.ToString());
                     tabControl1.TabPages[1].Text = string.Format("Khách Hàng Chưa Tồn Tại Ở File Gốc: {0}", totalRowCount);
                     button5.Enabled = true;
                     button7.Enabled = true;
@@ -107,14 +109,16 @@ namespace StorePhone
             try
             {
                 groupBox_grid.Text = "Khách Hàng";
-                dataGridView_tontai.DataSource = SQLDatabase.ExcDataTable(" select  a.Id,a.didong, a.ten_khach_hang,a.phuong,a.quan_huyen ,  a.dia_chi,a.ngay,a.thang, a.namsinh,a.email, a.cuoc, a.gioi_tinh, a.ngan_hang, a.sim, a.tinh,a.tinh_cuoc,a.ngay_kich_hoat,a.goi_cuoc,a.dong_may,a.he_dieu_hanh,a.chuc_vu,a.cong_ty, a.ghi_chu,  a.filenguon,  a.creatdate "
+                dataGridView_tontai.DataSource = SQLDatabase.ExcDataTable(" select top 100 a.Id,a.didong, a.ten_khach_hang,a.phuong,a.quan_huyen ,  a.dia_chi,a.ngay,a.thang, a.namsinh,a.email, a.cuoc, a.gioi_tinh, a.ngan_hang, a.sim, a.tinh,a.tinh_cuoc,a.ngay_kich_hoat,a.goi_cuoc,a.dong_may,a.he_dieu_hanh,a.chuc_vu,a.cong_ty, a.ghi_chu,  a.filenguon,  a.creatdate "
                                                                        + " from dienthoai_new  a inner join dienthoai_goc b on a.didong=b.didong ");
 
                 long totalRowCount = 0;
-                DataTable table1 = SQLDatabase.ExcDataTable("Select COUNT(*) As TotalRow from dienthoai_new  a inner join dienthoai_goc b on a.didong=b.didong ");
-                if (table1 != null && Convert.ToInt32(table1.Rows[0][0]) > 0)
+        //DataTable table1 = SQLDatabase.ExcDataTable("Select COUNT(*) As TotalRow from dienthoai_new  a inner join dienthoai_goc b on a.didong=b.didong ");
+
+                totalRowCount = dataGridView_tontai.Rows.Count;
+                if (totalRowCount > 0)
                 {
-                    totalRowCount = long.Parse(table1.Rows[0][0].ToString());
+                    totalRowCount = long.Parse(totalRowCount.ToString());
                     tabControl1.TabPages[0].Text = string.Format("Khách Hàng Tồn Tại Ở File Gốc: {0}", totalRowCount);
                     button1.Enabled = true;
                     btnXoaTrungGoc.Enabled = true;
