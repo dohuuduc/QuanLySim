@@ -329,7 +329,7 @@ namespace StorePhone
                                 if (sdef.UsesHeader == SchemaSpec.SchemeDef.FirstRowHeader.Yes)
                                     connbit = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + path + @";Extended Properties=""Text;HDR=Yes;CharacterSet=Unicode;FMT=TabDelimited""";
                                 else
-                                    connbit = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + path + @";Extended Properties=""Text;HDR=No;CharacterSet=Unicode;FMT=TabDelimited""";
+                                    connbit = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + path + @";Extended Properties=""Text;HDR=No;CharacterSet=65001;FMT=TabDelimited""";
                                 break;
                             default:
                                 break;

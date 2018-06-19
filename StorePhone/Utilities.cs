@@ -733,16 +733,16 @@ namespace StorePhone
                 }
 
                 /***********text*****************/
-                /*
+                
                 OleDbConnection con = new OleDbConnection(connectionString);
                 con.Open();
 
-                OleDbDataAdapter dap = new OleDbDataAdapter("select * from [096test.txt]", con);
+                OleDbDataAdapter dap = new OleDbDataAdapter("select * from [mau.txt]", con);
 
                 DataTable dt = new DataTable();
                 dt.TableName = "Data";
                 dap.Fill(dt);
-                */
+                
 
                 reader = SQLDatabase.ExcOleReaderDataSource(connectionString, tableName, columnNames);
 

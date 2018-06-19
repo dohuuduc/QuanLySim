@@ -77,3 +77,25 @@ D:\GitHub Desktop\QuanLySim\StorePhone\obj\Debug\StorePhone.Properties.Resources
 D:\GitHub Desktop\QuanLySim\StorePhone\obj\Debug\StorePhone.csproj.GenerateResource.Cache
 D:\GitHub Desktop\QuanLySim\StorePhone\obj\Debug\StorePhone.csproj.CoreCompileInputs.cache
 D:\GitHub Desktop\QuanLySim\StorePhone\obj\Debug\StorePhone.csproj.CopyComplete
+D:\GitHubDesktop\QuanLySim\StorePhone\bin\Debug\StorePhone.exe.config
+D:\GitHubDesktop\QuanLySim\StorePhone\bin\Debug\StorePhone.exe
+D:\GitHubDesktop\QuanLySim\StorePhone\bin\Debug\StorePhone.pdb
+D:\GitHubDesktop\QuanLySim\StorePhone\obj\Debug\StorePhone.csprojResolveAssemblyReference.cache
+D:\GitHubDesktop\QuanLySim\StorePhone\obj\Debug\StorePhone.frmBackup.resources
+D:\GitHubDesktop\QuanLySim\StorePhone\obj\Debug\StorePhone.frmChangKieuXuat.resources
+D:\GitHubDesktop\QuanLySim\StorePhone\obj\Debug\StorePhone.frmTimNangCao.resources
+D:\GitHubDesktop\QuanLySim\StorePhone\obj\Debug\StorePhone.frmChang2.resources
+D:\GitHubDesktop\QuanLySim\StorePhone\obj\Debug\StorePhone.frmChangeKyTu.resources
+D:\GitHubDesktop\QuanLySim\StorePhone\obj\Debug\StorePhone.frmChange3.resources
+D:\GitHubDesktop\QuanLySim\StorePhone\obj\Debug\StorePhone.frmChange4.resources
+D:\GitHubDesktop\QuanLySim\StorePhone\obj\Debug\StorePhone.frmProcessImport.resources
+D:\GitHubDesktop\QuanLySim\StorePhone\obj\Debug\StorePhone.frmXemTruoc.resources
+D:\GitHubDesktop\QuanLySim\StorePhone\obj\Debug\StorePhone.Main.resources
+D:\GitHubDesktop\QuanLySim\StorePhone\obj\Debug\StorePhone.frmImport.resources
+D:\GitHubDesktop\QuanLySim\StorePhone\obj\Debug\StorePhone.PleaseWait.resources
+D:\GitHubDesktop\QuanLySim\StorePhone\obj\Debug\StorePhone.Properties.Resources.resources
+D:\GitHubDesktop\QuanLySim\StorePhone\obj\Debug\StorePhone.csproj.GenerateResource.cache
+D:\GitHubDesktop\QuanLySim\StorePhone\obj\Debug\StorePhone.csproj.CoreCompileInputs.cache
+D:\GitHubDesktop\QuanLySim\StorePhone\obj\Debug\StorePhone.csproj.CopyComplete
+D:\GitHubDesktop\QuanLySim\StorePhone\obj\Debug\StorePhone.exe
+D:\GitHubDesktop\QuanLySim\StorePhone\obj\Debug\StorePhone.pdb
