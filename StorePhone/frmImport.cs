@@ -280,7 +280,12 @@ namespace StorePhone
                     {
                         /*kiễm tra định nghĩ cấu hình file txt*/
                         string path = Path.GetDirectoryName(txt_FileName.Text);
-                     
+                        
+                        /*by: loai ky tu " ra khoi flie */
+                        string text = File.ReadAllText(txt_FileName.Text);
+                        text = text.Replace(Convert.ToChar(ConvertType.ToInt(34)), Convert.ToChar(32));
+                        File.WriteAllText(txt_FileName.Text, text);
+                        /*********************************/
                         SchemaSpec.SchemeDef sdef = new SchemaSpec.SchemeDef();
                         if (Properties.Settings.Default.SchemaSpec == null)
                         {
